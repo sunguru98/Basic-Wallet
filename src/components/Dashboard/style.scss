@@ -1,0 +1,86 @@
+.Dashboard {
+  display: flex;
+  width: 100%;
+  justify-content: space-between !important;
+
+  &__list,
+  &__send {
+    background: white;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  &__create {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    box-sizing: content-box;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  &__list {
+    flex-basis: 35%;
+    overflow: auto;
+    position: relative;
+
+    &--accounts {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    &--account {
+      margin: 10px 0;
+      padding: 10px;
+      font-weight: bold;
+      color: black;
+      position: relative;
+
+      &.selected {
+        background: #8d44ac;
+        color: white;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  &__send {
+    flex: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+      margin: 20px 0;
+    }
+
+    & form {
+      margin: 10px 0;
+      width: 80%;
+    }
+
+    & input {
+      width: 100%;
+      margin: 15px 0;
+
+      &[type="submit"] {
+        margin: 20px 0;
+      }
+    }
+  }
+}
